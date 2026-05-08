@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", monospace;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('../image/2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative; 
+    min-height: 100vh; 
+    color: black;
+}
+hr{
+    margin: 10px 0;
+}
+a{
+    text-decoration: none;
+}
+
+/*^ верхняя навигация */
+
+.header{
+    display: flex;         
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+    z-index: 2;
+
+    background: #000;
+
+    width: 100%;
+    height: 50px;
+}
+.header .main-nav{
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+
+    padding: 0 10px;
+}
+.main-nav{
+    display: flex;
+    gap: 10px;
+
+    background: black;
+}
+.header .nav-logo{
+    display: flex;
+    justify-content: start;
+}
+.nav-logo {
+    z-index: 4;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0 20px;
+
+    background: url('../image/logo.png')no-repeat center center;
+    background-size: cover;
+}
+
+.input-search {
+    padding: 6px 0;
+    padding-left: 30px;
+
+    border: 1px solid white;
+    border-radius: 2px;
+
+    background: rgb(31, 30, 30);
+    color: white;
+}
+
+.input-search::placeholder{
+    color: white;
+}
+
+.input-search:focus::placeholder{
+    opacity: 0;
+}
+
+.input-search:focus{
+    outline: none;
+    border: 2px solid white;
+}
+
+.search-svg{
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    bottom: 10px;
+
+    background: url('../image/srh.svg') no-repeat center center;
+    color: white;
+}
+
+
+.btn-login {
+    background: black;
+    color: white;
+
+    padding: 5px 20px;
+
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.btn-regestration {
+    padding: 5px 50px;
+
+    background: white;
+    color: black;
+
+    border: 2px solid black;
+    border-radius: 3px;
+}
+.btn-regestration:hover {
+    border: 2px solid white;
+    border-radius: 3px;
+
+    background: black;
+    color: white;
+}
+.btn-login:hover {
+    background: white;
+    color: black;
+}
+
+/** Основной контент */
+.hero-container{
+    display: flex;
+
+    color: white;
+    background-color: black;
+
+    border-radius: 4px;
+    border: 2px solid white;
+    
+    overflow-y: auto;
+    position: absolute;
+    top: 115vh; 
+    left: 50vw;
+    right: 50vw; 
+    transform: translate(-50%, -50%); 
+
+    width: 60vw; 
+    max-width: 6000px; 
+    height: 200vh; 
+    max-height: 2000px; 
+}
+.container{
+    padding: 50px;
+}
+
+/*& Секция Welcome */
+.welcome{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome-title{
+    font-size: 36px;
+    font-weight: 300;
+    font-family: rubik, sans-serif;
+
+    display: flex;
+    justify-content: start;
+}
+
+.section-first_welcome {
+    border: 1px solid whitesmoke;
+
+    margin: 10px 0;
+    padding: 20px 20px; 
+}
+.section-first_welcome h3{
+    display: flex;
+    justify-content: center;
+
+    font-size: 36px;
+}
+.section-first_welcome p{
+    display: flex;
+    justify-content: center;
+
+    font-size: 15px;
+    line-height: 1.5;
+
+    margin: 20px 0;
+}
+
+.section-first_welcome a{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+
+    color: red;
+}
+.section-first_welcome ul{
+    list-style-type: none;
+}
+
+.section-first_welcome li a:hover{
+    color: white;
+}
+
+.section-first_welcome .image-wrapper{
+    background: url(../image/title_logo.png) no-repeat center center;
+    
+    margin-bottom: 20px;
+
+    height: 75px;
+    width: 100%;
+} 
+
+/* Секция об вики*/
+
+.section-second_about{
+    border: 1px solid whitesmoke;
+
+    margin: 10px 0;
+    padding: 20px 20px;
+
+}
+.section-second_about h3{
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid whitesmoke;
+
+    padding: 10px 15px;
+    margin: 10px 0;
+
+    font-size: 25px;
+}
+
+.section-second_about{
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Секция о участниках */
+
+.section-three_people{
+   border: 1px solid whitesmoke; 
+
+   margin: 10px 0;
+   padding: 20px 20px;
+
+}
+
+.section-three_people h3{
+    display: flex;
+    justify-content: center;
+
+    font-size: 25px;
+
+    border: 1px solid whitesmoke;
+
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.section-three_people label{
+    display: flex;
+    justify-content: center;
+
+    margin: 10px 0;
+}
+
+.section-three_people label a{
+    display: flex;
+
+    margin-left: 10px;
+}
+
+.section-three_people label .rgb-1{
+    color: rgb(gold,white, red);
+}
+
+.section-three_people label .purple{
+    color: purple;
+}
+
+.section-three_people label .gold{
+    color: gold;
+}
+
+.section-three_people label .brown{
+    color: brown;
+}
+
+.section-three_people label a:hover{
+   color: white;
+}
