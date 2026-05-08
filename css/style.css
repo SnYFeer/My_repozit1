@@ -304,4 +304,62 @@ a{
    color: white;
 }
 
-/* Семга бой */
+.left-nav {
+    
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    
+    width: 250px; 
+    height: 100vh; 
+    
+    background-color: #212121; 
+    color: white;
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding-top: 20px; 
+    
+    
+    transition: left 0.3s ease-in-out;
+    z-index: 1000; /
+}
+
+.three_line-svg {
+    margin: 30px 0 0 300px;
+    
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+    
+    background: url('../image/menu-icon.svg') no-repeat center center; 
+}
+
+.left-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.left-nav ul li a {
+    display: block; 
+
+    padding: 12px 20px; 
+
+    color: white;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.left-nav ul li a:hover {
+    background-color: #424242; 
+}
+
+
+.left-nav.open {
+    left: 0; 
+}
