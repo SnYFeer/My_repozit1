@@ -3,16 +3,21 @@
 * {
     margin: 0;
     padding: 0;
+
     font-family: "Press Start 2P", monospace;
     font-weight: 400;
+
     box-sizing: border-box;
 }
 
 body {
     background: url('../image/2.jpg') no-repeat center center fixed;
     background-size: cover;
+
     position: relative;
+
     min-height: 100vh;
+
     color: black;
 }
 
@@ -24,31 +29,39 @@ a {
     text-decoration: none;
 }
 
-/* ===== ХЕДЕР ===== */
+/* шапочка */
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     position: fixed;
-    z-index: 2;
-    background: #000;
-    width: 100%;
-    height: 50px;
     top: 0;
     left: 0;
+
+    z-index: 2;
+
+    background: #000;
+
+    width: 100%;
+    height: 50px;
+    
 }
 
 .header .main-nav {
     height: 100%;
+
     justify-content: end;
     align-items: center;
+
     padding: 0 10px;
 }
 
 .main-nav {
     display: flex;
     gap: 10px;
+
     background: black;
 }
 
@@ -56,25 +69,30 @@ a {
     z-index: 4;
     width: 32px;
     height: 32px;
+
     margin: 0 20px;
+    
     background: url('../image/logo.png') no-repeat center center;
     background-size: cover;
-    flex-shrink: 0;
 }
 
 .input-box {
     display: flex;
     align-items: center;
+
     position: relative;
 }
 
 .input-search {
     padding: 6px 0;
     padding-left: 30px;
+
     border: 1px solid white;
     border-radius: 2px;
+
     background: rgb(31, 30, 30);
     color: white;
+
     width: 180px;
 }
 
@@ -93,10 +111,13 @@ a {
 
 .search-svg {
     z-index: 1;
+
     width: 20px;
     height: 20px;
+
     position: absolute;
     left: 5px;
+
     background: url('../image/srh.svg') no-repeat center center;
     background-size: contain;
 }
@@ -104,12 +125,14 @@ a {
 .btn-login {
     background: black;
     color: white;
+
     padding: 5px 20px;
+
     border: 2px solid white;
     border-radius: 3px;
+    
     cursor: pointer;
-    white-space: nowrap;
-    font-family: "Press Start 2P", monospace;
+    
     font-size: 10px;
 }
 
@@ -117,16 +140,17 @@ a {
     padding: 5px 20px;
     background: white;
     color: black;
+
     border: 2px solid black;
     border-radius: 3px;
+
     cursor: pointer;
-    white-space: nowrap;
-    font-family: "Press Start 2P", monospace;
     font-size: 10px;
 }
 
 .btn-regestration:hover {
     border: 2px solid white;
+
     background: black;
     color: white;
 }
@@ -136,18 +160,17 @@ a {
     color: black;
 }
 
-/* ===== БОКОВОЕ МЕНЮ ===== */
 
 .three_line-svg {
     position: fixed;
-    top: 55px;
-    left: 10px;
+    top: 52px;
+    left: 15px;
 
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 
+    z-index: 1000;
     cursor: pointer;
-    z-index: 999;
 
     background: url('../image/menu-icon.svg') no-repeat center center;
     background-size: contain;
@@ -156,52 +179,54 @@ a {
 .left-nav {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -270px;
 
-    width: 250px;
+    width: 270px;
     height: 100vh;
 
-    background-color: #212121;
-    color: white;
+    background-color: #111111;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.left-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.left-nav ul li a {
-    display: block;
-    padding: 12px 20px;
-    color: white;
-    font-family: "Press Start 2P", monospace;
-    font-size: 12px;
-}
-
-.left-nav ul li a:hover {
-    background-color: #424242;
+    z-index: 999;
+    padding: 85px 0 0 35px;   
+    transition: left 0.4s ease;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .left-nav.open {
     left: 0;
 }
 
-/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.left-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.left-nav ul li a {
+    display: block;
+    padding: 16px 20px 16px 5px;
+    color: #ffffff;
+    font-size: 13.5px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.left-nav ul li a:hover {
+    background-color: #292929;
+    color: #ffff00;
+}
+
+
+/* основной блок */
 
 .hero-container {
     display: flex;
+
     color: white;
     background-color: black;
+
     border-radius: 4px;
     border: 2px solid white;
 
@@ -218,7 +243,7 @@ a {
     width: 100%;
 }
 
-/* ===== СЕКЦИЯ WELCOME ===== */
+/* секция welcome */
 
 .welcome {
     display: flex;
@@ -230,13 +255,16 @@ a {
     font-size: 36px;
     font-weight: 300;
     font-family: rubik, sans-serif;
+
     display: flex;
     justify-content: start;
+
     margin-bottom: 20px;
 }
 
 .section-first_welcome {
     border: 1px solid whitesmoke;
+
     margin: 10px 0;
     padding: 20px;
 }
@@ -244,13 +272,16 @@ a {
 .section-first_welcome h3 {
     display: flex;
     justify-content: center;
+
     font-size: 36px;
+
     margin-bottom: 10px;
 }
 
 .section-first_welcome p {
     display: flex;
     justify-content: center;
+
     font-size: 15px;
     line-height: 1.5;
     margin: 20px 0;
@@ -259,7 +290,9 @@ a {
 .section-first_welcome a {
     display: flex;
     justify-content: center;
+
     margin: 10px 0;
+
     color: red;
 }
 
@@ -274,17 +307,21 @@ a {
 .section-first_welcome .image-wrapper {
     background: url('../image/title_logo.png') no-repeat center center;
     background-size: contain;
+
     margin-bottom: 20px;
+
     height: 75px;
     width: 100%;
 }
 
-/* ===== СЕКЦИЯ О ВИКИ ===== */
+/* секция об вики  */
 
 .section-second_about {
     border: 1px solid whitesmoke;
+
     margin: 10px 0;
     padding: 20px;
+
     font-size: 15px;
     line-height: 1.5;
 }
@@ -292,16 +329,19 @@ a {
 .section-second_about h3 {
     display: flex;
     justify-content: center;
+
     border: 1px solid whitesmoke;
+
     padding: 10px 15px;
     margin: 10px 0;
     font-size: 25px;
 }
 
-/* ===== СЕКЦИЯ УЧАСТНИКОВ ===== */
+/* башмаки*/
 
 .section-three_people {
     border: 1px solid whitesmoke;
+
     margin: 10px 0;
     padding: 20px;
 }
@@ -309,8 +349,11 @@ a {
 .section-three_people h3 {
     display: flex;
     justify-content: center;
+
     font-size: 25px;
+
     border: 1px solid whitesmoke;
+
     padding: 10px 15px;
     margin: 10px 0;
 }
@@ -347,19 +390,19 @@ a {
     color: white;
 }
 
-/* ===== ФУТЕР ===== */
+/* подвал сайта */
 
 footer {
     text-align: center;
+
     padding: 20px;
+
     color: white;
 }
 
-/* ========================================
-   МЕДИАЗАПРОСЫ
-   ======================================== */
+/* адаптация*/
 
-/* Планшеты (до 1024px) */
+
 @media (max-width: 1024px) {
     .hero-container {
         width: 75%;
@@ -433,6 +476,26 @@ footer {
 
 /* Мобильные (до 480px) */
 @media (max-width: 480px) {
+    .header nav.main-nav{
+        display: flex;
+    }
+
+    .left-nav {
+        width: 240px;
+        padding-left: 30px;
+    }
+
+    .left-nav ul li a {
+        font-size: 12.5px;
+        padding: 14px 15px 14px 5px;
+    }
+
+    .three_line-svg {
+        top: 7px;
+        left: 32px;
+        width: 30px;
+        height: 30px;
+    }
     .nav-logo {
         width: 24px;
         height: 24px;
@@ -491,19 +554,7 @@ footer {
         margin-left: 0;
         margin-top: 4px;
     }
-
-    .three_line-svg {
-        width: 30px;
-        height: 30px;
-        top: auto;
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .left-nav ul li a {
-        font-size: 10px;
-        padding: 10px 15px;
-    }
+  
 }
 
 /* Очень маленькие экраны (до 360px) */
