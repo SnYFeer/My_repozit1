@@ -66,3 +66,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.transition = 'opacity 0.4s';
     document.body.style.opacity = '1';
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    const heroContainer = document.querySelector('.hero-container');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', async function(e) {
+            e.preventDefault();
+
+            const page = this.getAttribute('data-page');
+
+            if (!page) return;
+
+            try {
+                // Показываем загрузку (по желанию)
+                heroContainer.style.opacity = '0.4';
+
+                const response = await fetch(`contents/${page}-content.html`);
+                const html = await response.text();
+
+                // Заменяем содержимое hero-container
+                heroContainer.innerHTML = html;
+
+                // Плавное появление
+                setTimeout(() => {
+                    heroContainer.style.transition = 'opacity 0.4s';
+                    heroContainer.style.opacity = '1';
+                }, 50);
+
+            } catch (error) {
+                console.error('Ошибка загрузки:', error);
+                heroContainer.innerHTML = `
+                    <div class="container">
+                        <h2 style="color:red; text-align:center;">Ошибка загрузки контента</h2>
+                    </div>`;
+            }
+        });
+    });
+});
