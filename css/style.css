@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-*{  
+* {
     margin: 0;
     padding: 0;
     font-family: "Press Start 2P", monospace;
@@ -8,333 +8,169 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background: url('../image/2.jpg') no-repeat center center fixed;
     background-size: cover;
-    position: relative; 
-    min-height: 100vh; 
+    position: relative;
+    min-height: 100vh;
     color: black;
 }
-hr{
+
+hr {
     margin: 10px 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-/*^ верхняя навигация */
+/* ===== ХЕДЕР ===== */
 
-.header{
-    display: flex;         
+.header {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-
     z-index: 2;
-
     background: #000;
-
     width: 100%;
     height: 50px;
+    top: 0;
+    left: 0;
 }
-.header .main-nav{
+
+.header .main-nav {
     height: 100%;
     justify-content: end;
     align-items: center;
-
     padding: 0 10px;
 }
-.main-nav{
+
+.main-nav {
     display: flex;
     gap: 10px;
-
     background: black;
 }
-.header .nav-logo{
-    display: flex;
-    justify-content: start;
-}
+
 .nav-logo {
     z-index: 4;
-
     width: 32px;
     height: 32px;
-
     margin: 0 20px;
-
-    background: url('../image/logo.png')no-repeat center center;
+    background: url('../image/logo.png') no-repeat center center;
     background-size: cover;
+    flex-shrink: 0;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .input-search {
     padding: 6px 0;
     padding-left: 30px;
-
     border: 1px solid white;
     border-radius: 2px;
-
     background: rgb(31, 30, 30);
     color: white;
+    width: 180px;
 }
 
-.input-search::placeholder{
+.input-search::placeholder {
     color: white;
 }
 
-.input-search:focus::placeholder{
+.input-search:focus::placeholder {
     opacity: 0;
 }
 
-.input-search:focus{
+.input-search:focus {
     outline: none;
     border: 2px solid white;
 }
 
-.search-svg{
+.search-svg {
     z-index: 1;
-
-    width: 32px;
-    height: 32px;
-
+    width: 20px;
+    height: 20px;
     position: absolute;
-    bottom: 10px;
-
+    left: 5px;
     background: url('../image/srh.svg') no-repeat center center;
-    color: white;
+    background-size: contain;
 }
-
 
 .btn-login {
     background: black;
     color: white;
-
     padding: 5px 20px;
-
     border: 2px solid white;
     border-radius: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
 }
 
 .btn-regestration {
-    padding: 5px 50px;
-
+    padding: 5px 20px;
     background: white;
     color: black;
-
     border: 2px solid black;
     border-radius: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
 }
+
 .btn-regestration:hover {
     border: 2px solid white;
-    border-radius: 3px;
-
     background: black;
     color: white;
 }
+
 .btn-login:hover {
     background: white;
     color: black;
 }
 
-/** Основной контент */
-.hero-container{
-    display: flex;
-
-    color: white;
-    background-color: black;
-
-    border-radius: 4px;
-    border: 2px solid white;
-    
-    overflow-y: auto;
-    position: absolute;
-    top: 115vh; 
-    left: 50vw;
-    right: 50vw; 
-    transform: translate(-50%, -50%); 
-
-    width: 60vw; 
-    max-width: 6000px; 
-    height: 200vh; 
-    max-height: 2000px; 
-}
-.container{
-    padding: 50px;
-}
-
-/*& Секция Welcome */
-.welcome{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.welcome-title{
-    font-size: 36px;
-    font-weight: 300;
-    font-family: rubik, sans-serif;
-
-    display: flex;
-    justify-content: start;
-}
-
-.section-first_welcome {
-    border: 1px solid whitesmoke;
-
-    margin: 10px 0;
-    padding: 20px 20px; 
-}
-.section-first_welcome h3{
-    display: flex;
-    justify-content: center;
-
-    font-size: 36px;
-}
-.section-first_welcome p{
-    display: flex;
-    justify-content: center;
-
-    font-size: 15px;
-    line-height: 1.5;
-
-    margin: 20px 0;
-}
-
-.section-first_welcome a{
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-
-    color: red;
-}
-.section-first_welcome ul{
-    list-style-type: none;
-}
-
-.section-first_welcome li a:hover{
-    color: white;
-}
-
-.section-first_welcome .image-wrapper{
-    background: url(../image/title_logo.png) no-repeat center center;
-    
-    margin-bottom: 20px;
-
-    height: 75px;
-    width: 100%;
-} 
-
-/* Секция об вики*/
-
-.section-second_about{
-    border: 1px solid whitesmoke;
-
-    margin: 10px 0;
-    padding: 20px 20px;
-
-}
-.section-second_about h3{
-    display: flex;
-    justify-content: center;
-
-    border: 1px solid whitesmoke;
-
-    padding: 10px 15px;
-    margin: 10px 0;
-
-    font-size: 25px;
-}
-
-.section-second_about{
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-/* Секция о участниках */
-
-.section-three_people{
-   border: 1px solid whitesmoke; 
-
-   margin: 10px 0;
-   padding: 20px 20px;
-
-}
-
-.section-three_people h3{
-    display: flex;
-    justify-content: center;
-
-    font-size: 25px;
-
-    border: 1px solid whitesmoke;
-
-    padding: 10px 15px;
-    margin: 10px 0;
-}
-
-.section-three_people label{
-    display: flex;
-    justify-content: center;
-
-    margin: 10px 0;
-}
-
-.section-three_people label a{
-    display: flex;
-
-    margin-left: 10px;
-}
-
-.section-three_people label .rgb-1{
-    color: rgb(gold,white, red);
-}
-
-.section-three_people label .purple{
-    color: purple;
-}
-
-.section-three_people label .gold{
-    color: gold;
-}
-
-.section-three_people label .brown{
-    color: brown;
-}
-
-.section-three_people label a:hover{
-   color: white;
-}
-
-.left-nav {
-    
-    position: fixed;
-    top: 0;
-    left: -250px; 
-    
-    width: 250px; 
-    height: 100vh; 
-    
-    background-color: #212121; 
-    color: white;
-    
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding-top: 20px; 
-    
-    
-    transition: left 0.3s ease-in-out;
-    z-index: 1000; /
-}
+/* ===== БОКОВОЕ МЕНЮ ===== */
 
 .three_line-svg {
-    margin: 30px 0 0 300px;
-    
+    position: fixed;
+    top: 55px;
+    left: 10px;
+
     width: 40px;
     height: 40px;
 
     cursor: pointer;
-    
-    background: url('../image/menu-icon.svg') no-repeat center center; 
+    z-index: 999;
+
+    background: url('../image/menu-icon.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.left-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: #212121;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .left-nav ul {
@@ -345,21 +181,352 @@ a{
 }
 
 .left-nav ul li a {
-    display: block; 
-
-    padding: 12px 20px; 
-
+    display: block;
+    padding: 12px 20px;
     color: white;
-
-    font-family: 'Rubik', sans-serif;
+    font-family: "Press Start 2P", monospace;
+    font-size: 12px;
 }
-
 
 .left-nav ul li a:hover {
-    background-color: #424242; 
+    background-color: #424242;
 }
 
-
 .left-nav.open {
-    left: 0; 
+    left: 0;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+
+.hero-container {
+    display: flex;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    border: 2px solid white;
+
+    width: 60%;
+    max-width: 900px;
+    min-height: 100vh;
+
+    margin: 80px auto 40px auto;
+    position: relative;
+}
+
+.container {
+    padding: 50px;
+    width: 100%;
+}
+
+/* ===== СЕКЦИЯ WELCOME ===== */
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome-title {
+    font-size: 36px;
+    font-weight: 300;
+    font-family: rubik, sans-serif;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.section-first_welcome {
+    border: 1px solid whitesmoke;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.section-first_welcome h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-first_welcome p {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.section-first_welcome a {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    color: red;
+}
+
+.section-first_welcome ul {
+    list-style-type: none;
+}
+
+.section-first_welcome li a:hover {
+    color: white;
+}
+
+.section-first_welcome .image-wrapper {
+    background: url('../image/title_logo.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 20px;
+    height: 75px;
+    width: 100%;
+}
+
+/* ===== СЕКЦИЯ О ВИКИ ===== */
+
+.section-second_about {
+    border: 1px solid whitesmoke;
+    margin: 10px 0;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.section-second_about h3 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid whitesmoke;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+/* ===== СЕКЦИЯ УЧАСТНИКОВ ===== */
+
+.section-three_people {
+    border: 1px solid whitesmoke;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.section-three_people h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    border: 1px solid whitesmoke;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.section-three_people label {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.section-three_people label a {
+    display: flex;
+    margin-left: 10px;
+}
+
+/* исправлен неверный синтаксис rgb() */
+.section-three_people label .rgb-1 {
+    color: #ff6600;
+}
+
+.section-three_people label .purple {
+    color: purple;
+}
+
+.section-three_people label .gold {
+    color: gold;
+}
+
+.section-three_people label .brown {
+    color: brown;
+}
+
+.section-three_people label a:hover {
+    color: white;
+}
+
+/* ===== ФУТЕР ===== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+/* ========================================
+   МЕДИАЗАПРОСЫ
+   ======================================== */
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .hero-container {
+        width: 75%;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+
+    .section-first_welcome h3 {
+        font-size: 26px;
+    }
+}
+
+/* Маленькие планшеты (до 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .input-search {
+        width: 120px;
+    }
+
+    .btn-login,
+    .btn-regestration {
+        font-size: 8px;
+        padding: 5px 12px;
+    }
+
+    .hero-container {
+        width: 88%;
+        margin: 120px auto 30px auto;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .welcome-title {
+        font-size: 22px;
+    }
+
+    .section-first_welcome h3 {
+        font-size: 20px;
+    }
+
+    .section-first_welcome p {
+        font-size: 12px;
+    }
+
+    .section-second_about h3,
+    .section-three_people h3 {
+        font-size: 18px;
+    }
+
+    .section-second_about {
+        font-size: 12px;
+    }
+}
+
+/* Мобильные (до 480px) */
+@media (max-width: 480px) {
+    .nav-logo {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+    }
+
+    .input-search {
+        width: 90px;
+        font-size: 8px;
+    }
+
+    .btn-login,
+    .btn-regestration {
+        font-size: 7px;
+        padding: 4px 8px;
+    }
+
+    .hero-container {
+        width: 95%;
+        margin: 140px auto 20px auto;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .welcome-title {
+        font-size: 16px;
+    }
+
+    .section-first_welcome h3 {
+        font-size: 14px;
+    }
+
+    .section-first_welcome p {
+        font-size: 10px;
+    }
+
+    .section-second_about h3,
+    .section-three_people h3 {
+        font-size: 13px;
+    }
+
+    .section-second_about {
+        font-size: 10px;
+    }
+
+    .section-three_people label {
+        font-size: 9px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-three_people label a {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+
+    .three_line-svg {
+        width: 30px;
+        height: 30px;
+        top: auto;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .left-nav ul li a {
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+}
+
+/* Очень маленькие экраны (до 360px) */
+@media (max-width: 360px) {
+    .main-nav {
+        gap: 4px;
+    }
+
+    .input-search {
+        width: 70px;
+    }
+
+    .btn-login,
+    .btn-regestration {
+        font-size: 6px;
+        padding: 4px 6px;
+    }
+
+    .welcome-title {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 10px;
+    }
 }
