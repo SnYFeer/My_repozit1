@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 *{
     box-sizing: border-box;
-    font-family: 'Source Sans 3' 'sans-serif';
+    font-family: rubik, sans-serif;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../image/background.png') no-repeat;
+    background: url('../image/back.png') no-repeat;
     background-size: cover;
     background-position: center;
     overflow-y: hidden;
@@ -20,33 +20,46 @@ a{
 }
 
 .wrapper {
-    width: 400px;
     padding: 20px;
-    background: transparent;
-    background-color: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(20px);
+    width: 400px;
     border-radius: 20px;
-    color: black;
+    background: transparent;
+    z-index: 1; 
+    border: 1px solid rgba(103, 232, 249, 0.35);
+    background: linear-gradient(160deg, 
+        rgba(15, 23, 42, 0.85),
+        rgba(22, 47, 68, 0.8),
+        rgba(16, 65, 82, 0.75)
+    );
+    backdrop-filter: blur(14px);
+    box-shadow:  0 0 35px rgba(103, 232, 249, 0.15), inset 0 0 40px rgba(103, 232, 249, 0.1); 
 }
 .wrapper h2{
     font-size: 30px;
     text-align: center;
+    color: whitesmoke;
 }
 
 .wrapper input{
-    margin: 20px 0;
+    margin: 15px 0;
     background: transparent;
     outline: none;
 }
 
 .input-box input {
     width: 100%;
-    padding: 15px ;
+    padding: 15px;
+    color: whitesmoke;
     border-radius: 20px;
-    
+    border: 1px solid rgba(103, 232, 249, 0.35);
+    background: rgba(15, 35, 58, 0.55);
 }
 .input-box input::placeholder {
-    color: black;
+    color: whitesmoke;
+}
+
+.input-box input:focus::placeholder{
+    opacity: 0;
 }
 
 .input-checkbox {
@@ -57,27 +70,34 @@ a{
     margin: 10px 0;
 }
 
-.input-checkbox label {
-    color: white;
-}
 
-.input-gender {
-    text-align: center;
-    margin: 0 10px;
+.input-checkbox label {
+    color: whitesmoke;
 }
-.input-gender label{
-    color: black;
+.input-data input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid whitesmoke;
 }
-.input-gender input {
-    margin: 0 10px;
+input[type="date"]{
+    border: 1px solid rgba(103, 232, 249, 0.35);
+    background: rgba(15, 35, 58, 0.55);
+    color: whitesmoke;
+    
 }
 
 .btn {
+    border: 1px solid rgba(103, 232, 249, 0.35);
+    background: rgba(15, 35, 58, 0.55);
     padding: 10px;
     margin:20px 0;
-    color: black;
-    background: white;
+    color: white;
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.btn:hover{
+    background: rgba(45, 103, 110, 0.35);
 }
