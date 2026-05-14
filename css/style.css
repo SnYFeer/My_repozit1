@@ -436,25 +436,6 @@ footer {
 }
 
 
-
-/* адаптация*/
-
-
-@media (max-width: 1024px) {
-    .hero-container {
-        width: 75%;
-    }
-
-    .welcome-title {
-        font-size: 28px;
-    }
-
-    .section-first_welcome h3 {
-        font-size: 26px;
-    }
-}
-
-/* Маленькие планшеты (до 768px) */
 @media (max-width: 768px) {
     .header {
         flex-wrap: wrap;
@@ -481,7 +462,7 @@ footer {
     }
 
     .hero-container {
-        width: 88%;
+        width: 100%;
         margin: 120px auto 30px auto;
     }
 
@@ -511,109 +492,3 @@ footer {
     }
 }
 
-/* Мобильные (до 480px) */
-@media (max-width: 480px) {
-    .header nav.main-nav{
-        display: flex;
-    }
-
-    .left-nav {
-        width: 240px;
-        padding-left: 30px;
-    }
-
-    .left-nav ul li a {
-        font-size: 12.5px;
-        padding: 14px 15px 14px 5px;
-    }
-
-    .three_line-svg {
-        top: 7px;
-        left: 32px;
-        width: 30px;
-        height: 30px;
-    }
-    .nav-logo {
-        width: 24px;
-        height: 24px;
-        margin: 0 10px;
-    }
-
-    .input-search {
-        width: 90px;
-        font-size: 8px;
-    }
-
-    .btn-login,
-    .btn-regestration {
-        font-size: 7px;
-        padding: 4px 8px;
-    }
-
-    .hero-container {
-        width: 95%;
-        margin: 140px auto 20px auto;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .welcome-title {
-        font-size: 16px;
-    }
-
-    .section-first_welcome h3 {
-        font-size: 14px;
-    }
-
-    .section-first_welcome p {
-        font-size: 10px;
-    }
-
-    .section-second_about h3,
-    .section-three_people h3 {
-        font-size: 13px;
-    }
-
-    .section-second_about {
-        font-size: 10px;
-    }
-
-    .section-three_people label {
-        font-size: 9px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .section-three_people label a {
-        margin-left: 0;
-        margin-top: 4px;
-    }
-}
-
-/* Очень маленькие экраны (до 360px) */
-@media (max-width: 360px) {
-    .main-nav {
-        gap: 4px;
-    }
-
-    .input-search {
-        width: 70px;
-    }
-
-    .btn-login,
-    .btn-regestration {
-        font-size: 6px;
-        padding: 4px 6px;
-    }
-
-    .welcome-title {
-        font-size: 13px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}

@@ -373,14 +373,16 @@ a {
 }
 
 @media (max-width: 768px) {
-    .hero-container {
-        margin-left: 0;
+    .btn-regestration , .btn-login {
+        font-size: 6px;
+        padding: 5px 12px;
     }
-
+    .hero-container{
+        width: 100%;
+    }
     .section-cards {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-
     .explore-title {
         font-size: 14px;
     }
