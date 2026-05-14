@@ -84,82 +84,75 @@ a {
 }
 
 .input-search {
-    padding: 6px 0;
-    padding-left: 30px;
-
-    border: 1px solid white;
+    padding: 8px 12px 8px 35px;
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 2px;
+    outline: none;
 
-    background: rgb(31, 30, 30);
+    background: rgba(255, 255, 255, 0.05);
     color: white;
+    font-size: 7px;
 
+    transition: all 0.3s;
     width: 180px;
 }
 
-.input-search::placeholder {
-    color: white;
-}
-
-.input-search:focus::placeholder {
-    opacity: 0;
-}
-
 .input-search:focus {
-    outline: none;
-    border: 2px solid white;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 220px; 
 }
 
-.search-svg {
-    z-index: 1;
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    left: 5px;
-
-    background: url('../image/srh.svg') no-repeat center center;
-    background-size: contain;
+.input-search::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
+
 
 .btn-login {
-    background: black;
+    padding: 8px 20px;
+
+    background: transparent;
     color: white;
+    font-size: 7px;
 
-    padding: 5px 20px;
-
-    border: 2px solid white;
-    border-radius: 3px;
-    
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
     cursor: pointer;
-    
-    font-size: 10px;
-}
 
-.btn-regestration {
-    padding: 5px 20px;
-    background: white;
-    color: black;
-
-    border: 2px solid black;
-    border-radius: 3px;
-
-    cursor: pointer;
-    font-size: 10px;
-}
-
-.btn-regestration:hover {
-    border: 2px solid white;
-
-    background: black;
-    color: white;
+    transition: all 0.3s;
+    letter-spacing: 1px;
 }
 
 .btn-login:hover {
     background: white;
     color: black;
+    border-color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
+
+.btn-regestration {
+    padding: 8px 20px;
+
+    background: white;
+    color: black;
+    font-family: "Press Start 2P", monospace;
+    font-size: 7px;
+
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-regestration:hover {
+    background: transparent;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
 
 .three_line-svg {
     position: fixed;
@@ -290,6 +283,7 @@ a {
 }
 
 .card:hover {
+    transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 0.6);
 }
 
