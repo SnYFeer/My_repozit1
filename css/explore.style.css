@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Press Start 2P", monospace;
+    font-weight: 400;
+
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../image/2.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    position: relative;
+
+    min-height: 100vh;
+
+    color: black;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* шапочка */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    background: #000;
+
+
+    width: 100%;
+    height: 50px;
+    
+}
+
+.header .main-nav {
+    height: 100%;
+
+    justify-content: end;
+    align-items: center;
+
+    padding: 0 10px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 10px;
+
+    background: black;
+}
+
+.nav-logo {
+    z-index: 4;
+    width: 32px;
+    height: 32px;
+
+    margin: 0 20px;
+    
+    background: url('../image/logo.png') no-repeat center center;
+    background-size: cover;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.input-search {
+    padding: 6px 0;
+    padding-left: 30px;
+
+    border: 1px solid white;
+    border-radius: 2px;
+
+    background: rgb(31, 30, 30);
+    color: white;
+
+    width: 180px;
+}
+
+.input-search::placeholder {
+    color: white;
+}
+
+.input-search:focus::placeholder {
+    opacity: 0;
+}
+
+.input-search:focus {
+    outline: none;
+    border: 2px solid white;
+}
+
+.search-svg {
+    z-index: 1;
+
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 5px;
+
+    background: url('../image/srh.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.btn-login {
+    background: black;
+    color: white;
+
+    padding: 5px 20px;
+
+    border: 2px solid white;
+    border-radius: 3px;
+    
+    cursor: pointer;
+    
+    font-size: 10px;
+}
+
+.btn-regestration {
+    padding: 5px 20px;
+    background: white;
+    color: black;
+
+    border: 2px solid black;
+    border-radius: 3px;
+
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.btn-regestration:hover {
+    border: 2px solid white;
+
+    background: black;
+    color: white;
+}
+
+.btn-login:hover {
+    background: white;
+    color: black;
+}
+
+
+.three_line-svg {
+    position: fixed;
+    top: 52px;
+    left: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    z-index: 1000;
+    cursor: pointer;
+
+    background: url('../image/menu-icon.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.left-nav {
+    position: fixed;
+    top: 0;
+    left: -270px;
+
+    width: 270px;
+    height: 100vh;
+
+    background-color: black;
+    border-right: 1px solid whitesmoke;
+
+    z-index: 999;
+    padding: 85px 0 0 35px;   
+    transition: left 0.4s ease;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.left-nav.open {
+    left: 0;
+}
+
+.left-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.left-nav ul li a {
+    display: block;
+    padding: 16px 20px 16px 5px;
+    color: #ffffff;
+    font-size: 13.5px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.left-nav ul li a:hover {
+    background-color: #292929;
+    color: white;
+}
+
+
+/* основной блок */
+
+.hero-container {
+    display: flex;
+
+    color: white;
+    background-color: black;
+
+
+    width: 60%;
+    max-width: 900px;
+    min-height: 100vh;
+
+    margin: 80px auto 40px auto;
+    position: relative;
+}
+
+.container {
+    padding: 0 50px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.explore-header {
+    text-align: center;
+    padding: 40px 0 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+.explore-title {
+    color: white;
+
+    font-size: 25px;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.explore-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 13px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+.section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: rgb(10, 10, 10);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: brightness(0.8);
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.card-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    font-size: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    width: fit-content;
+}
+
+.card-title {
+    font-size: 10px;
+    color: white;
+    line-height: 1.6;
+}
+
+.card-desc {
+    font-size: 7px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.8;
+    flex: 1;
+}
+
+
+.lg-backdrop {
+    background: rgba(0, 0, 0, 0.95) ;
+}
+
+.lg-toolbar {
+    background: rgba(0, 0, 0, 0.8) ;
+}
+
+.lg-sub-html {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px ;
+}
+
+.lg-title {
+    font-size: 14px ;
+    color: white ;
+    margin-bottom: 10px ;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.lg-desc {
+    font-size: 8px ;
+    color: rgba(255, 255, 255, 0.7) ;
+    line-height: 2 ;
+}
+
+.lg-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    font-size: 7px ;
+    color: rgba(255, 255, 255, 0.7) ;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        margin-left: 0;
+    }
+
+    .section-cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .explore-title {
+        font-size: 14px;
+    }
+}

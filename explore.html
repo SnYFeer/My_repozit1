@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/explore.style.css">
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css">
+    <title>Исследовать</title>
 </head>
 <body>
-     <header class="header"> 
+    <header class="header"> 
         <a href="#"><div class="nav-logo"></div></a>
         <nav class="main-nav">
             <div class="input-box">    
@@ -28,23 +32,112 @@
         <li><a href="explore.html" class="nav-link">Исследовать</a></li>
     </ul>
 </aside>
-   <div class="hero-container">
-            <div class="container">
-                <div class="welcome">
-                    <h1 class="welcome-title">Заглавная</h1>
-                </div>
-                <section class="section-first_welcome ">
-                    <div class="image-wrapper"></div>
-                    
-                </section>
-                <section class="section-second_about ">
-                    
-                </section>
-                <section class="section-three_people">
-                    
-                </section>
+    <div class="hero-container">
+        <div class="container"> 
+            <div class="explore-header">
+                <h1 class="explore-title">👁 Исследовать 👁</h1>
+                <p class="explore-subtitle">Все крипипасты Minecraft в одном месте</p>
+            </div>
+            <div class="section-cards" id="gallery">
+
+                <a class="card"  href="image/her.png" data-lg-size="1200-800" data-sub-html="<h4 class='lg-title'>Херобрин</h4><p class='lg-desc'>Один из самых известных мифов Minecraft.      Загадочная фигура без глаз, которая преследует игроков.</p>     <span class='lg-tag'>Существа</span> ">
+                    <div class="card-img-wrap">
+                        <img src="image/her.png" alt="Хорбрин">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Существа</span>
+                        <h3 class="card-title">Херобрин</h3>
+                        <p class="card-desc">Загадочная фигура без глаз, которая преследует игроков в одиночных мирах...</p>
+                        
+                    </div>
+                </a>     
+                <a class="card" href="image/ent.png" data-lg-size="1200-800"data-sub-html="<h4 class='lg-title'>Entity 303</h4>     <p class='lg-desc'>Хакер или демон? Существо которое взламывает аккаунты и уничтожает миры.</p><span class='lg-tag'>Существа</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/ent.png" alt="Entity 303">
+                        <div class="card-overlay">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Существа</span>
+                        <h3 class="card-title">Entity 303</h3>
+                        <p class="card-desc">Хакер или демон? Существо которое взламывает аккаунты...</p>
+                    </div>
+                </a>
+                <a class="card" href="image/farlands.png" data-lg-size="1200-800"data-sub-html="     <h4 class='lg-title'>Дальние земли</h4>     <p class='lg-desc'>Край мира Minecraft. Место где реальность начинает разрушаться.</p>     <span class='lg-tag'>Локации</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/farlands.png" alt="Дальние земли">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Локации</span>
+                        <h3 class="card-title">Дальние земли</h3>
+                        <p class="card-desc">Край мира где реальность начинает разрушаться и ломаться...</p>
+                        
+                    </div>
+                </a>
+                <a class="card" href="image/cursword.png" data-lg-size="1200-800"data-sub-html="    <h4 class='lg-title'>Проклятый меч</h4>    <p class='lg-desc'>Предмет с необъяснимыми чарами. Игроки утверждают что он появляется сам.</p>    <span class='lg-tag'>Предметы</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/cursword.png" alt="Проклятый меч">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Предметы</span>
+                        <h3 class="card-title">Проклятый меч</h3>
+                        <p class="card-desc">Предмет с необъяснимыми чарами. Появляется в инвентаре сам...</p>
+                        
+                    </div>
+                </a>
+                <a class="card" href="image/hamam.jpg" data-lg-size="1200-800" data-sub-html="<h4 class='lg-title'>Длиннорукий</h4><p class='lg-desc'>Огромное существо размером 4.5 блоков в высоту</p><span class='lg-tag'>Существа</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/hamam.jpg" alt="Zahar">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Существа</span>
+                        <h3 class="card-title">Длиннорукий</h3>
+                        <p class="card-desc">Он всегда есть только в том мире где он сможет добраться до вас, не думайте о нём, ему это кажется подозрительным..</p>
+                        
+                    </div>
+                </a>
+                <a class="card" href="image/cave.png" data-lg-size="1200-800"data-sub-html="<h4 class='lg-title'>Пещера теней</h4><p class='lg-desc'>Пещера которой нет на карте. Те кто зашли туда — не вернулись.</p>    <span class='lg-tag'>Локации</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/cave.png" alt="Пещера теней">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Локации</span>
+                        <h3 class="card-title">Пещера теней</h3>
+                        <p class="card-desc">Пещера которой нет на карте. Те кто зашли туда не вернулись...</p>
+                        
+                    </div>
+                </a>
+                <a class="card" href="image/null.jpg" data-lg-size="1200-800"data-sub-html="    <h4 class='lg-title'>NULL</h4>    <p class='lg-desc'>Чёрная фигура без имени. Появляется только в старых версиях игры.</p>    <span class='lg-tag'>Существа</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/null.jpg" alt="NULL">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Существа</span>
+                        <h3 class="card-title">NULL</h3>
+                        <p class="card-desc">Чёрная фигура без имени. Появляется только в старых версиях...</p>
+                        
+                    </div>
+                </a>
+                <a class="card" href="image/zahar.png" data-lg-size="1200-800" data-sub-html="<h4 class='lg-title'>Захар</h4><p class='lg-desc'>Он настолько крутой, все чипсы разлетаются при виде его.</p><span class='lg-tag'>Существа</span>">
+                    <div class="card-img-wrap">
+                        <img src="image/zahar.png" alt="Zahar">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Существа</span>
+                        <h3 class="card-title">Захар</h3>
+                        <p class="card-desc">Страшный монстр появляющийся только в полнолуние и он тут за чипсами.</p>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="script2.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
