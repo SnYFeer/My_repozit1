@@ -181,17 +181,24 @@ a {
 }
 .three_line-svg {
     position: fixed;
-    top: 52px;
-    left: 15px;
+    
+    top: 80px;
+    left: 10px;
 
     width: 35px;
     height: 35px;
 
     z-index: 1000;
     cursor: pointer;
+    transition: all 0.4s ease;
 
     background: url('../image/menu-icon.svg') no-repeat center center;
     background-size: contain;
+}
+
+.three_line-svg.open{
+    transition: all 0.4s ease;
+    transform: translateX(16em);
 }
 
 .left-nav {
@@ -203,7 +210,6 @@ a {
     height: 100vh;
 
     background-color: black;
-    border-right: 1px solid whitesmoke;
 
     z-index: 999;
     padding: 85px 0 0 35px;   

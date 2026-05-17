@@ -10,6 +10,7 @@ button.addEventListener('click', function(event) {
     // Переключаем класс 'open'
     // Если он есть — убираем (закрываем), если нет — добавляем (открываем)
     navMenu.classList.toggle('open');
+    button.classList.toggle('open');
 });
 document.addEventListener('DOMContentLoaded', () => {
 
