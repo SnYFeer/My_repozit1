@@ -247,32 +247,45 @@ a {
 }
 
 
-/* основной блок */
+.page-grid {
+    display: flex;   
+    justify-content: center;      
+    flex-direction: row;   
+    align-items: flex-start;
+    gap: 25px;
 
-.hero-container  {
-    display: flex;
-
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto 50px auto;
+    padding: 0 90px;
     color: white;
+}
 
-    width: 70%;
-    max-width: 1000px;
-    min-height: 100vh;
 
-    margin: 80px auto 40px auto;
+.page-main {
+    flex: 1;       
+    min-width: 0; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
+    gap: 20px;
 }
 
-.container {
-    padding: 50px;
-    width: 100%;
-}
+
 
 /* секция welcome */
 
+/* основной блок */
 .welcome {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 90%;
+    max-width: 1300px;
+    margin: 90px auto 0 auto;
+    padding: 0 20px;
+    color: white;
 }
 
 .welcome-title {
@@ -304,7 +317,7 @@ a {
     background-color: rgba(8, 8, 12, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.4);
     margin: 10px 0;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding: 20px;
 
     box-shadow:
@@ -390,6 +403,63 @@ a {
 
     
 }
+/* Правая боковая колонка */
+.sidebar {
+    width: 300px;
+    flex-shrink: 0;     
+    position: sticky;   
+    top: 70px;       
+}
+
+/* Блок крипипасты дня */
+.daily-creep {
+    background: rgba(10, 0, 0, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.daily-header {
+    background: black;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.daily-content {
+    padding: 18px;
+}
+
+.daily-title {
+    font-size: 1.1rem;
+    color: #ffdddd;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.daily-desc {
+    color: #aaaaaa;
+    line-height: 1.65;
+    font-size: 0.82rem;
+    margin-bottom: 16px;
+}
+
+.daily-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.daily-link:hover {
+    color: #ff9999;
+    text-shadow: 0 0 10px #ff0000;
+}
 
 /* секция об вики  */
 
@@ -407,6 +477,10 @@ a {
     box-shadow:
     0 0 30px rgba(255, 0, 0, 0.1),
     inset 0 0 60px rgba(0, 0, 0, 0.5);
+}
+
+.section-second_about p {
+    padding: 0 30px;
 }
 
 .section-second_about h3 {
@@ -431,7 +505,7 @@ a {
     0 0 30px rgba(255, 0, 0, 0.1),
     inset 0 0 60px rgba(0, 0, 0, 0.5);
 }
-.section-three_people .block-title {
+    .section-three_people .block-title {
     display: flex;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -484,6 +558,13 @@ a {
 
 
 @media (max-width: 768px) {
+    .page-grid {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
     .header {
         flex-wrap: wrap;
         height: auto;
@@ -506,11 +587,6 @@ a {
     .btn-regestration {
         font-size: 8px;
         padding: 5px 12px;
-    }
-
-    .hero-container {
-        width: 100%;
-        margin: 120px auto 30px auto;
     }
 
     .container {
