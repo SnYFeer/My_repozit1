@@ -6,6 +6,7 @@
     font-family: rubik, sans-serif;
 }
 body{
+    position: relative;
     background: url('../image/back.png') no-repeat;
     background-size: cover;
     background-position: center;
@@ -27,6 +28,9 @@ a{
     background: transparent;
     z-index: 1; 
     border: 1px solid rgba(103, 232, 249, 0.35);
+
+    animation: breatheGlow 4s ease-in-out infinite;
+    
     background: linear-gradient(160deg, 
         rgba(15, 23, 42, 0.85),
         rgba(22, 47, 68, 0.8),
@@ -90,3 +94,18 @@ a{
     background: rgba(45, 103, 110, 0.35);
 }
 
+
+
+@keyframes breatheGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(0, 150, 255, 0.2),
+      0 0 40px rgba(0, 150, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(0, 200, 255, 0.5),
+      0 0 80px rgba(0, 150, 255, 0.3),
+      0 0 120px rgba(0, 100, 255, 0.1); 
+  }
+}
