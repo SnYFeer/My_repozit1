@@ -299,37 +299,17 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.warning-block {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    background: rgba(255, 0, 0, 0.05);
-    border-left: 3px solid #ff0000;
-    padding: 12px 15px;
-    margin: 15px 0;
-    border-radius: 0 8px 8px 0;
-}
-
-.warning-icon {
-    font-size: 1.5rem;
-    color: #ff0000;
-    flex-shrink: 0;
-}
-
-.warning-block p {
-    color: #999999;
-    font-size: 0.8rem;
-    margin: 0;
-    line-height: 1.6;
-    font-family: 'Minecraft', monospace;
-}
 
 .section-first_welcome {
-    background-color: black;
+    background-color: rgba(8, 8, 12, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.4);
     margin: 10px 0;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     padding: 20px;
+
+    box-shadow:
+    0 0 30px rgba(255, 0, 0, 0.1),
+    inset 0 0 60px rgba(0, 0, 0, 0.5);
 }
 
 .section-first_welcome h3 {
@@ -342,30 +322,62 @@ a {
 }
 
 .section-first_welcome p {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    color: #bbbbbb;
+    line-height: 1.75;
+    padding: 0 35px;
+    margin-bottom: 20px;
+}
 
-    font-size: 15px;
+.warning-bar {
+    background: rgba(80, 0, 0, 0.4);
+    border-left: 1px solid #880000;
+
+    margin:  25px 0;
+    padding: 11px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
     line-height: 1.5;
-    margin: 20px 0;
+    color: #ffaaaa;
 }
 
-.section-first_welcome a {
+.warning-icon {
+    font-size: 1.4rem;
+}
+
+.wb-links {
     display: flex;
-    justify-content: center;
-
-    margin: 10px 0;
-
-    color: red;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+    padding: 0 10px;
 }
 
-.section-first_welcome ul {
-    list-style-type: none;
+.wb-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    background: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
 }
 
-.section-first_welcome li a:hover {
-    color: white;
+.wb-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #fff;
+    color: #ffffff;
+    padding-left: 25px; 
 }
+
+.wb-link-icon {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
 
 .section-first_welcome .image-wrapper {
     background: url('../image/title_logo.png') no-repeat center center;
@@ -375,20 +387,26 @@ a {
 
     height: 75px;
     width: 100%;
+
+    
 }
 
 /* секция об вики  */
 
 .section-second_about {
-    background-color: black;
+    background-color: rgba(8, 8, 12, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.4);
 
     margin: 10px 0;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     padding: 20px;
 
     font-size: 15px;
     line-height: 1.5;
+
+    box-shadow:
+    0 0 30px rgba(255, 0, 0, 0.1),
+    inset 0 0 60px rgba(0, 0, 0, 0.5);
 }
 
 .section-second_about h3 {
@@ -405,67 +423,63 @@ a {
 /* башмаки*/
 
 .section-three_people {
-    background-color: black;
+    background: rgba(8, 8, 12, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
 
-    margin: 10px 0;
-    padding: 20px;
+    box-shadow:
+    0 0 30px rgba(255, 0, 0, 0.1),
+    inset 0 0 60px rgba(0, 0, 0, 0.5);
 }
-
-.section-three_people h3 {
+.section-three_people .block-title {
     display: flex;
     justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 
+    padding: 10px 5px;
+    margin: 20px 20px;
     font-size: 25px;
 
-    border: 1px solid rgba(255, 255, 255, 0.4);
-
-    padding: 10px 15px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 1.65rem;
+    color: #fff;
 }
 
-.section-three_people label {
+.contributors-list {
+    padding: 0 40px 15px;
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.section-three_people label a {
+.contributor-row {
     display: flex;
-    margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #ffffff;
 }
 
-/* исправлен неверный синтаксис rgb() */
-.section-three_people label .rgb-1 {
-    color: #ff6600;
+
+
+.role {
+    color: #888888;
+    font-size: 0.9rem;
 }
 
-.section-three_people label .purple {
-    color: purple;
+.name {
+    font-size: 1.05rem;
+    font-weight: bold;
 }
 
-.section-three_people label .gold {
-    color: gold;
-}
-
-.section-three_people label .brown {
-    color: brown;
-}
-
-.section-three_people label a:hover {
-    color: white;
-}
-/* карточки сайта */
-
-/* подвал сайта */
-
-footer {
+.block-footer {
     text-align: center;
-
-    padding: 20px;
-
-    color: white;
+    margin-top: 30px;
+    padding: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: #fff;
+    border-top: 1px solid #fff;
 }
 
 
@@ -516,23 +530,24 @@ footer {
     }
 
     .section-second_about h3,
-    .section-three_people h3 {
-        font-size: 18px;
+    .section-three_people .block-title {
+        font-size: 12px;
+    }
+
+    .section-three_people span.name{
+        font-size: 12px;
     }
 
     .section-second_about {
         font-size: 12px;
     }
 }
-
-
-
 #particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* чтоб не мешал кликам */
-  z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 0;
 }
