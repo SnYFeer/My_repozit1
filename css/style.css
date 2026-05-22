@@ -276,20 +276,19 @@ a {
 
 /* секция welcome */
 
-/* основной блок */
 .welcome {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 90%;
-    max-width: 1300px;
+    max-width: 1160px;
     margin: 90px auto 0 auto;
     padding: 0 20px;
     color: white;
 }
 
 .welcome-title {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 300;
 
     display: flex;
@@ -429,7 +428,7 @@ a {
     padding: 12px;
     font-size: 0.8rem;
     letter-spacing: 2px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .daily-content {
@@ -438,9 +437,8 @@ a {
 
 .daily-title {
     font-size: 1.1rem;
-    color: #ffdddd;
+    color: #ffffff;
     margin-bottom: 12px;
-    text-shadow: 0 0 10px #ffffff;
 }
 
 .daily-desc {
